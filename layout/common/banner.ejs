@@ -1,5 +1,5 @@
 <div class="page-big-banner">
-    <div id="full-page-carousel" class="carousel slide">
+    <div id="full-page-carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
         <ol class="carousel-indicators">
             <% sortByTime(site.posts,'updated',false).slice(0,4).forEach(function(post,idx){ %>
             <li data-target="#full-page-carousel" data-slide-to="<%-idx-%>" class="<%- idx===0?'active':'' -%>"></li>

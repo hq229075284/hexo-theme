@@ -2,4 +2,6 @@ menu:
   - pathname1: 中文名1
   - pathname2: 中文名2
 
-defaultBigBanner: https://assets.materialup.com/uploads/f9c7551f-7796-4456-8bc1-6590fdab2957/preview.jpg
+defaultBigBanner: http://pic.paopaoche.net/up/2015-6/201569164043.jpg
+# defaultBigBanner: http://attach.bbs.miui.com/forum/201408/15/052420c5fgd6mpk9k6my4b.jpg
+# defaultBigBanner: https://assets.materialup.com/uploads/f9c7551f-7796-4456-8bc1-6590fdab2957/preview.jpg
