@@ -1,3 +1,22 @@
 <div class="page-big-banner">
-    
+    <div id="full-page-carousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <% sortByTime(site.posts,'updated',false).slice(0,4).forEach(function(post,idx){ %>
+            <li data-target="#full-page-carousel" data-slide-to="<%-idx-%>" class="<%- idx===0?'active':'' -%>"></li>
+            <% }) %>
+        </ol>
+        <div class="carousel-inner">
+            <% sortByTime(site.posts,'updated',false).slice(0,4).forEach(function(post,idx){ %>
+            <div class="<%-idx===0?'carousel-item active':'carousel-item'-%>">
+                <img src="<%-post.bigBanner||theme.defaultBigBanner-%>">
+                <div class="carousel-abstract-block d-none d-md-block">
+                    <h5><%-post.title-%></h5>
+                    <div class="more"><%-post.more-%></div>
+                    <div class="excerpt"><%-post.excerpt-%></div>
+                    <div class="content"><%-post.content-%></div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
 </div>

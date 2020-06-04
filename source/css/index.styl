@@ -2,4 +2,52 @@
 // @import './_header.styl';
 // @import './_menu.styl';
 // @import './_avater.styl';
-@import './_*.styl'
+@import './_*.styl';
+
+.page-big-banner {
+    height: 100vh;
+    margin-top: - $page-header-height;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        left: 0;
+        border-left: 50vw solid #fff;
+        border-right: 50vw solid transparent;
+        border-bottom: 25px solid #fff;
+        border-top: 25px solid transparent;
+    }
+
+    .carousel, .carousel-inner, .carousel-item {
+        height: 100%;
+    }
+
+    #full-page-carousel {
+        .carousel-indicators {
+            margin-right: 10%;
+            justify-content: flex-end;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .carousel-abstract-block {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-40%);
+        height: 50vh;
+        width: 40%;
+        overflow: hidden;
+        padding: 16px;
+        background-color: #ececece0;
+        border-radius: 10px;
+    }
+}

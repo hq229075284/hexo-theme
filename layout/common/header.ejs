@@ -1,7 +1,7 @@
-<div class="page-header">
+<div class="<%-path==='index.html'?'page-header index':'page-header'-%>">
     <div>
         <%- partial('common/avater') -%>
-        <span class="blog-title" ><%- config.title -%></span>
+        <span class="blog-title"><%- config.title -%></span>
     </div>
     <%- partial('common/menu') -%>
 </div>
