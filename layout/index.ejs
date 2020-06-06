@@ -1,0 +1,22 @@
+<div class="post-container">
+    <div class="recent-post">
+        <h3 class="title">最近更新</h3>
+        <div class="row">
+            <% site.posts.slice(0,12).forEach(function(post){ %>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="index-page-post"><div class="content"><%-post.content-%></div></div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <div class="all-post">
+        <h3 class="title">全部文章</h3>
+        <div class="row">
+            <% site.posts.forEach(function(post){ %>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="index-page-post"><div class="content"><%-post.content-%></div></div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>

@@ -5,8 +5,8 @@
 
 <body>
     <%- partial('common/header.ejs') -%>
-    <%-partial('common/banner.ejs')-%>
-    <div class="layout-content-container">
+    <%- path==='index.html'?partial('common/banner.ejs'):''-%>
+    <div class="container-xl">
         <%- body -%>
     </div>
     <!-- <%- partial('common/footer.ejs') -%> -->
