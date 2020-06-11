@@ -2,9 +2,12 @@
     <div class="recent-post">
         <h3 class="title">最近更新</h3>
         <div class="row">
-            <% site.posts.slice(0,12).forEach(function(post){ %>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="index-page-post"><div class="content"><%-post.content-%></div></div>
+            <% site.posts.slice(0,12).forEach(function(post,idx){ %>
+                <div class="col-12 col-lg-6">
+                    <div class="index-page-post" style="z-index:<%-idx+1-%>">
+                        <div class="img" style="background-image:url(<%-post.thumb||theme.defaultBigBanner-%>)"></div>
+                        <div class="content"><%-post.content-%></div>
+                    </div>
                 </div>
             <% }) %>
         </div>
